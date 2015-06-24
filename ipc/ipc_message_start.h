@@ -72,6 +72,9 @@ enum IPCMessageStart {
   MetroViewerMsgStart,
   CCMsgStart,
   MediaPlayerMsgStart,
+#if defined(USE_GSTREAMER)
+  MediaMsgStart,
+#endif
   TracingMsgStart,
   PeerConnectionTrackerMsgStart,
   VisitedLinkMsgStart,

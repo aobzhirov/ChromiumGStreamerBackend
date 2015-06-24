@@ -109,6 +109,9 @@
 
 namespace content {
 extern int GpuMain(const content::MainFunctionParams&);
+#if defined(USE_GSTREAMER)
+extern int MediaMain(const content::MainFunctionParams&);
+#endif
 #if defined(ENABLE_PLUGINS)
 #if !defined(OS_LINUX)
 extern int PluginMain(const content::MainFunctionParams&);
@@ -368,6 +371,9 @@ int RunNamedProcessTypeMain(
     { switches::kGpuProcess,         GpuMain },
 #if defined(OS_ANDROID)
     { switches::kDownloadProcess,    DownloadMain},
+#endif
+#if defined(USE_GSTREAMER)
+    { switches::kMediaProcess,       MediaMain },
 #endif
 #endif  // !CHROME_MULTIPLE_DLL_BROWSER
   };
