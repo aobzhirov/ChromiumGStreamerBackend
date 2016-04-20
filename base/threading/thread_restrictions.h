@@ -39,7 +39,7 @@ class BrowserGpuMemoryBufferManager;
 class BrowserShutdownProfileDumper;
 class BrowserTestBase;
 #if defined(USE_GSTREAMER)
-class MediaChannelHost;
+class MediaPlayerChannelHost;
 #endif
 class NestedMessagePumpAndroid;
 class ScopedAllowWaitForAndroidLayoutTests;
@@ -227,7 +227,7 @@ class BASE_EXPORT ThreadRestrictions {
   friend class
       content::BrowserGpuMemoryBufferManager;     // http://crbug.com/420368
 #if defined(USE_GSTREAMER)
-  friend class content::MediaChannelHost;
+  friend class content::MediaPlayerChannelHost;
 #endif
   friend class content::TextInputClientMac;       // http://crbug.com/121917
   friend class dbus::Bus;                         // http://crbug.com/125222
